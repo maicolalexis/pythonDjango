@@ -1,0 +1,11 @@
+{% extends 'nosotros.html' %}
+{% block titulo %} Agregar Libro {% endblock titulo %}
+{% block contenido %} 
+<div class="card">
+    <div class="card-header">
+        Crear un libro
+        <h4 class="card-title">Datos del libro</h4>
+        {% include 'libros/formulario.html' %}
+    </div>
+</div>
+{% endblock contenido %}
