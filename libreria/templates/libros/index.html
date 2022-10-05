@@ -11,6 +11,7 @@
         <div class="table-responsive">
             <table class="table table-primary">
                 <thead>
+                    
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Titulo</th>
@@ -19,17 +20,20 @@
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
+                
                 <tbody>
+                    {% for libro in libros %} 
                     <tr class="">
-                        <td scope="row">R1C1</td>
-                        <td>R1C2</td>
-                        <td>R1C3</td>
+                        <td scope="row">{{ libro.id }}</td>
+                        <td>{{libro.titulo}}</td>
+                        <td><img src="{{ libro.imagen.url }}" height="100"></td>
+                        <td>{{libro.descripcion}}</td>
+                        <td><a class="btn btn-success" href="{% url 'editarLibro' %}">Editar</a>
+                            <a class="btn btn-danger" href="{% url 'eliminar' libro.id %}">Eliminar</a>
+                        </td>
+                            
                     </tr>
-                    <tr class="">
-                        <td scope="row">Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
