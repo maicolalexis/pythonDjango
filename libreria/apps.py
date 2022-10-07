@@ -1,3 +1,5 @@
+#se crea automaticamente al crear la app
+'''python manage.py startapp nombredelaapp'''
 from django.apps import AppConfig
 
 

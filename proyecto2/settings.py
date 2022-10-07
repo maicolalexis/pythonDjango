@@ -29,7 +29,9 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+'''aplicaciones nuevas'''
+'''python manage.py startapp Nombre de la app'''
+'''y al hacer eso se debe llamar aqui'''
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -51,7 +53,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'proyecto2.urls'
-
+'''para los templates'''
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -73,7 +75,14 @@ WSGI_APPLICATION = 'proyecto2.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+'''para la data base se pueden usar ciertas bd'''
+'''la original de django que nos brinda la base de datos como un archivo sql'''
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'NombreDeLaBaseDeDatosQueLeQuierePoner.db',
+    }
+}'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -125,7 +134,10 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
+
+'''os.path.join(BASE_DIR, '') representa la ruta a una carpeta en BASE_DIR campo'''
 MEDIA_ROOT = os.path.join(BASE_DIR, '')
+'''toma como string el alojamiento de las imagenes'''
 MEDIA_URL = '/imagenes/'
 
 

@@ -20,3 +20,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+'''este nos ayudara a manejar todo el proyecto'''

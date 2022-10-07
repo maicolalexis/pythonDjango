@@ -1,5 +1,8 @@
 from django.db import models
-
+'''modelo para hacer la sql'''
+'''usamos python manage.py migrate'''
+'''luego python manage.py makemigrations'''
+'''el verbose_name se usa para nombras las columnas'''
 class Libro(models.Model):
     id = models.AutoField(primary_key = True)
     titulo = models.CharField(max_length = 100, verbose_name ='Titulo')

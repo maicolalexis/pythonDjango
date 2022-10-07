@@ -21,3 +21,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('libreria.urls')),
 ]
+'''urls de el admin'''
